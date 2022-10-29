@@ -23,7 +23,7 @@ define("DB_PASS","");
       /* Al instanciar un objeto se realiza la conexión de manera automática */
       try {
         $this->db_handler= new PDO("mysql:host=".$this->host.";dbname=".$this->dbname,$this->user,$this->pass);
-        echo "Conexión realizada";
+        //?echo "Conexión realizada";
       } catch (PDOException $e) {
         echo $e->getMessage();
       }
@@ -37,7 +37,7 @@ define("DB_PASS","");
 
       try {
         $db_handler= new PDO("mysql:host=".$host.";dbname=".$dbname,$user,$pass);
-        echo "Conexión realizada";
+        //?echo "Conexión realizada";
       } catch (PDOException $e) {
         echo $e->getMessage();
       }

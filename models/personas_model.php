@@ -12,7 +12,7 @@
     }
 
     /* Métodos CRUD */
-    //TODO Métodos 
+    
   }
 
 ?>
