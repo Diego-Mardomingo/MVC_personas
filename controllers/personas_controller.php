@@ -36,8 +36,12 @@
       return $this->pers_model->readAll();
     }
 
-    public function borrar(){
+    public function listarPorDNI($DNI){
+      return $this->pers_model->readById($DNI);
+    }
 
+    public function borrar(){
+      $this->pers_model->delete($_POST['DNI']);
     }
 
     public function cargarVistaBorrar(){

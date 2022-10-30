@@ -26,8 +26,15 @@
           $controller->cargarVistaBorrar();
           require_once("views/".$controller->view);
         }else{
-          //TODO
-          echo "Borrar persona";
+          $datosAVista = $controller->listarTodo();
+          $datosAVista2=$controller->listarPorDNI($_POST['DNI']);
+          $controller->cargarVistaBorrar();
+          require_once("views/".$controller->view);
+          if(isset($_POST['confirmar_borrado'])){
+            $controller->borrar();
+            $controller->cargar_inicio();
+            require_once("views/".$controller->view);
+          }
         }
         break;
     }

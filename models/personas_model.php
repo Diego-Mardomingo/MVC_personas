@@ -30,6 +30,14 @@
       return $arrayPersonas;
     }
 
+    public function readById($DNI){
+      $params=[':DNI'=>$DNI];
+      $pdo = $this->db_handler->prepare("SELECT * FROM personas WHERE DNI=:DNI");
+      $pdo->execute($params);
+      $row=$pdo->fetch(PDO::FETCH_ASSOC);
+      return $row;
+    }
+
     public function delete($DNI){
       $params=[':DNI'=>$DNI];
       $pdo = $this->db_handler->prepare("DELETE FROM personas WHERE DNI=:DNI");
@@ -38,4 +46,9 @@
     }
 
   }
+  /*$modelo=new personas_model();
+  $array=$modelo->readById("DNIPrueba");
+  foreach ($array as $key => $value) {
+    echo $value;
+  }*/
 ?>
