@@ -40,13 +40,22 @@
       return $this->pers_model->readById($DNI);
     }
 
-    public function borrar(){
-      $this->pers_model->delete($_POST['DNI']);
+    public function borrar($DNI){
+      $this->pers_model->delete($DNI);
     }
 
     public function cargarVistaBorrar(){
       $this->view = "borrarPersona_view.php";
       $this->view_title = "Borrar una persona de la base de datos";
+    }
+
+    public function actualizar($persona){
+      $this->pers_model->update($persona);
+    }
+
+    public function cargarVistaActualizar(){
+      $this->view = "actualizarPersona_view.php";
+      $this->view_title = "Actualizar una persona en la base de datos";
     }
 
   }

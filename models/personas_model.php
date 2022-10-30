@@ -45,10 +45,12 @@
       return $pdo->rowCount();
     }
 
+    public function update($persona){
+      $params=[':nombre'=>$persona->getNombre(),':apellidos'=>$persona->getApellidos(),':edad'=>$persona->getEdad(),':DNI'=>$persona->getDNI()];
+      $pdo = $this->db_handler->prepare("UPDATE personas SET nombre=:nombre,apellidos=:apellidos,edad=:edad WHERE DNI=:DNI");
+      $pdo->execute($params);
+      return $pdo->rowCount();
+    }
+
   }
-  /*$modelo=new personas_model();
-  $array=$modelo->readById("DNIPrueba");
-  foreach ($array as $key => $value) {
-    echo $value;
-  }*/
 ?>

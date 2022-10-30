@@ -7,10 +7,10 @@
   <title>Document</title>
 </head>
 <body>
-  <form action="index.php?controller=personas_controller&metodo=borrar" method="POST">
-    <p>Selecciona el DNI de la persona que quieres eliminar:</p>
+  <form action="index.php?controller=personas_controller&metodo=actualizar" method="POST">
+    <p>Selecciona el DNI de la persona que deseas modificar:</p>
     <select name="DNI">
-      <?php
+    <?php
         foreach($datosAVista as $key => $persona){
           /* Para que cuando se seleccione una opción y se envíen los datos, luego aparezca
           seleccionada la opción que hemos elegido */
@@ -36,16 +36,17 @@
   <?php
   if(isset($_POST['ver'])){
   ?>
-  <form action="index.php?controller=personas_controller&metodo=confirmar_borrado" method="POST">
-    <p>Datos de la persona que se va a borrar:</p>
-    <p>Nombre: <input type="text" name="nombre" readonly value="<?php echo $datosAVista2['nombre'] ?>"></p>
-    <p>Apellidos: <input type="text" name="apellidos" readonly value="<?php echo $datosAVista2['apellidos'] ?>"></p>
-    <p>Edad: <input type="text" name="edad" readonly value="<?php echo $datosAVista2['edad'] ?>"></p>
+  <form action="index.php?controller=personas_controller&metodo=confirmar_actualizar" method="POST">
+    <p>Datos de la persona que se va a actualizar:</p>
+    <p>Nombre: <input type="text" name="nombre" value="<?php echo $datosAVista2['nombre'] ?>"></p>
+    <p>Apellidos: <input type="text" name="apellidos" value="<?php echo $datosAVista2['apellidos'] ?>"></p>
+    <p>Edad: <input type="text" name="edad" value="<?php echo $datosAVista2['edad'] ?>"></p>
     <p>DNI: <input type="text" name="DNI" readonly value="<?php echo $datosAVista2['DNI'] ?>"></p>
-    <input type="submit" name="confirmar_borrado" value="Confirmar borrado">
+    <input type="submit" name="confirmar_actualizar" value="Confirmar actualizar">
   </form>
   <?php
   }
   ?>
+
 </body>
 </html>
