@@ -13,6 +13,7 @@
     <li><a href="index.php?controller=personas_controller&metodo=listar">Listar personas</a></li>
     <li><a href="index.php?controller=personas_controller&metodo=actualizar">Actualizar una persona</a></li>
     <li><a href="index.php?controller=personas_controller&metodo=borrar">Borrar una persona</a></li>
+    <li><a href="index.php?controller=personas_controller&metodo=estadisticas">Estadísticas</a></li>
   </ul>
 </body>
 </html>

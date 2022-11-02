@@ -58,5 +58,11 @@
       $this->view_title = "Actualizar una persona en la base de datos";
     }
 
+    public function estadisticas(){
+      $this->view = "estadisticas_view.php";
+      $this->view_title = "Estadísticas de la base de datos";
+      return $this->pers_model->stadistics();
+    }
+
   }
 ?>

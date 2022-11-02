@@ -57,6 +57,10 @@
           require_once("views/".$controller->view);
         }
         break;
+      case 'estadisticas':
+        $datosAVista = $controller->estadisticas();
+        require_once("views/".$controller->view);
+        break;
     }
   }else{
     $controller->cargar_inicio();

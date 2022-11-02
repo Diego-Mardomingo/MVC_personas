@@ -52,5 +52,12 @@
       return $pdo->rowCount();
     }
 
+    public function stadistics(){
+      $pdo = $this->db_handler->prepare("SELECT count(*) as 'numPersonas',round(avg(edad),0) as 'edadMedia', max(edad) as 'edadMAX', min(edad) as 'edadMIN' FROM personas");
+      $pdo->execute();
+      $row = $pdo->fetch(PDO::FETCH_ASSOC);
+      return $row;
+    }
+
   }
 ?>
