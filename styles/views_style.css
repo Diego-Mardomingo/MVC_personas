@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+  background-color: #fcfcfc;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  background-color: #383838;
+  padding: 1em;
+  font-size: 1.3em;
+  text-align: center;
+}
+
+nav > a {
+  background-color: #383838;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 600;
+}
+
+nav > a:hover {
+  color: #48e;
+}
+
+table {
+  margin: auto;
+  margin-top: 2em;
+  font-size: 1.5em;
+}
+
+form {
+  margin: 0 2em;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.2em;
+  text-align: center;
+}
+
+select {
+  padding: 0.5em;
+  margin: 0.5em;
+  font-size: 1em;
+}
+
+input {
+  padding: 0.5em;
+  font-size: 1em;
+}
+
+input[type="submit"] {
+  width: 20em;
+  margin: auto;
+  font-weight: 600;
+}
+
+input[type="submit"]:hover {
+  background-color: #383838;
+  color: #fff;
+  cursor: pointer;
+}
+
+.datos {
+  margin-bottom: 1em;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.parrafos {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: left;
+  height: 15em;
+}
+
+.parrafos > p{
+  margin: 1em;
+}
+
+.input_datos{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 15em;
+}
+
+.input_datos > input{
+  margin: .5em;
+}
