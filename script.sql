@@ -1,3 +1,5 @@
+CREATE DATABASE bd_personas;
+
 CREATE TABLE personas (
   nombre varchar(25),
   apellidos varchar(80),

@@ -6,12 +6,19 @@
   if(isset($_GET["metodo"])){
     switch($_GET["metodo"]){
       case 'añadir':
+        $datosAVista="";
         if(empty($_POST)){
           $controller->cargarVistaCrear();
           require_once("views/".$controller->view);
         }else{
-          $controller->crear();
-          require_once("views/".$controller->view);
+          try {
+            $controller->crear();
+            require_once("views/".$controller->view);
+          } catch (PDOException $e) {
+            $datosAVista = 'error';
+            $controller->cargarVistaCrear();
+            require_once("views/".$controller->view);
+          }
         }
         break;
       case 'listar':

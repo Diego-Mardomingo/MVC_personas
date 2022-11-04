@@ -40,7 +40,7 @@
   if(isset($_POST['ver'])){
   ?>
   <form action="index.php?controller=personas_controller&metodo=confirmar_actualizar" method="POST">
-    <p>Datos de la persona que se va a actualizar:</p>
+    <p>Datos de la persona que se va a <b style="color:#48e;">actualizar</b> :</p>
     <div class="datos">
       <div class="parrafos">
         <p>Nombre:</p>
@@ -49,10 +49,10 @@
         <p>DNI:</p>
       </div>
       <div class="input_datos">
-        <input type="text" name="nombre" value="<?php echo $datosAVista2['nombre'] ?>">
-        <input type="text" name="apellidos" value="<?php echo $datosAVista2['apellidos'] ?>">
-        <input type="text" name="edad" value="<?php echo $datosAVista2['edad'] ?>">
-        <input type="text" name="DNI" readonly value="<?php echo $datosAVista2['DNI'] ?>">
+        <input type="text" name="nombre" required value="<?php echo $datosAVista2['nombre'] ?>">
+        <input type="text" name="apellidos" required value="<?php echo $datosAVista2['apellidos'] ?>">
+        <input type="number" name="edad" min="10" max="100" required value="<?php echo $datosAVista2['edad'] ?>">
+        <input type="text" name="DNI" required readonly value="<?php echo $datosAVista2['DNI'] ?>">
       </div>
     </div>
     <input type="submit" name="confirmar_actualizar" value="Confirmar actualizar">

@@ -40,7 +40,7 @@
   if(isset($_POST['ver'])){
   ?>
   <form action="index.php?controller=personas_controller&metodo=confirmar_borrado" method="POST">
-    <p>Datos de la persona que se va a borrar:</p>
+    <p>Datos de la persona que se va a <b style="color:red;">borrar</b> :</p>
     <div class="datos">
       <div class="parrafos">
         <p>Nombre:</p>
